@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b16">
+
+  <title>The Hidden Chapter</title>
+  <meta name="description" content="Some words are meant to be discovered.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="stars" aria-hidden="true"></div>
+
+  <main class="main-container">
+
+    <!-- LOGIN SCREEN -->
+    <section class="screen login-screen" id="loginScreen">
+
+      <div class="moon">☾</div>
+
+      <p class="eyebrow">A PRIVATE LITTLE UNIVERSE</p>
+
+      <h1 class="main-title">
+        The Hidden<br>
+        <span>Chapter</span>
+      </h1>
+
+      <p class="subtitle">
+        Some stories are not meant for everyone.
+        This one is waiting for you.
+      </p>
+
+      <div class="login-card">
+
+        <div class="lock-icon">✧</div>
+
+        <h2>Enter the Secret</h2>
+
+        <p class="card-description">
+          A little secret stands between you and these words.
+        </p>
+
+        <form id="loginForm">
+
+          <label for="visitorPassword">YOUR SECRET PASSWORD</label>
+
+          <div class="password-wrapper">
+            <input
+              type="password"
+              id="visitorPassword"
+              placeholder="Enter password..."
+              autocomplete="off"
+              required
+            >
+
+            <button type="button" id="togglePassword" aria-label="Show password">
+              ◉
+            </button>
+          </div>
+
+          <button type="submit" class="primary-button" id="unlockButton">
+            Unlock My Letter <span>→</span>
+          </button>
+
+          <p class="error-message" id="loginError" role="alert"></p>
+
+        </form>
+
+      </div>
+
+      <p class="bottom-note">MADE OF WORDS THAT MATTER</p>
+
+    </section>
+
+
+    <!-- LETTER SCREEN -->
+    <section class="screen letter-screen hidden" id="letterScreen">
+
+      <p class="eyebrow">A MESSAGE JUST FOR YOU</p>
+
+      <div class="letter-card">
+
+        <div class="letter-decoration">✧</div>
+
+        <p class="letter-to">A LETTER FOR</p>
+
+        <h2 id="letterName">Someone Special</h2>
+
+        <div class="letter-divider">
+          <span>✦</span>
+        </div>
+
+        <h3 id="letterTitle">A Hidden Chapter</h3>
+
+        <div class="letter-message" id="letterMessage"></div>
+
+        <p class="letter-end">END OF THIS CHAPTER</p>
+
+      </div>
+
+      <button class="secondary-button" id="closeLetter">
+        Close Letter
+      </button>
+
+    </section>
+
+
+    <!-- ADMIN LOGIN SCREEN -->
+    <section class="screen admin-screen hidden" id="adminScreen">
+
+      <p class="eyebrow">PRIVATE CONTROL ROOM</p>
+
+      <h2 class="admin-title">Admin Panel</h2>
+
+      <div class="login-card">
+
+        <h3>Administrator Access</h3>
+
+        <form id="adminForm">
+
+          <label for="adminPassword">ADMIN SECRET</label>
+
+          <input
+            type="password"
+            id="adminPassword"
+            placeholder="Enter admin secret"
+            required
+          >
+
+          <button type="submit" class="primary-button">
+            Continue →
+          </button>
+
+          <p class="error-message" id="adminError" role="alert"></p>
+
+        </form>
+
+      </div>
+
+    </section>
+
+
+    <!-- CREATE LETTER SCREEN -->
+    <section class="screen create-screen hidden" id="createScreen">
+
+      <p class="eyebrow">CREATE SOMETHING PERSONAL</p>
+
+      <h2 class="admin-title">Create a Letter</h2>
+
+      <div class="login-card">
+
+        <form id="createForm">
+
+          <label for="letterRecipient">RECIPIENT NAME</label>
+          <input type="text" id="letterRecipient" placeholder="Name" required>
+
+          <label for="newLetterTitle">LETTER TITLE</label>
+          <input type="text" id="newLetterTitle" placeholder="Title" required>
+
+          <label for="newLetterPassword">VISITOR PASSWORD</label>
+          <input type="password" id="newLetterPassword" placeholder="Set password" required>
+
+          <label for="newLetterMessage">YOUR MESSAGE</label>
+          <textarea id="newLetterMessage" rows="10" placeholder="Write your letter..." required></textarea>
+
+          <button type="submit" class="primary-button" id="createButton">
+            Save Private Letter →
+          </button>
+
+          <p class="error-message" id="createError" role="alert"></p>
+          <p class="success-message" id="createSuccess" role="status"></p>
+
+        </form>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
