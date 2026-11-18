@@ -2,8 +2,8 @@
 /* THE HIDDEN CHAPTER - APP LOGIC */
 
 // STEP 1: ADD YOUR SUPABASE PROJECT DETAILS
-const SUPABASE_URL = "YOUR_SUPABASE_PROJECT_URL";
-const SUPABASE_ANON_KEY = "YOUR_SUPABASE_ANON_KEY";
+const SUPABASE_URL = "https://xziygufnpqwjqephludi.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_6IhdmkZVdJhubjtaSLzIDA_EwU20c2r";
 
 // Do not put your service role key or ADMIN_SECRET here.
 
